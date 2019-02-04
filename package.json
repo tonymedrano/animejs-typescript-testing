@@ -1,7 +1,7 @@
 {
-  "name": "trigo-typescript-project",
+  "name": "animejs-typescript-testing",
   "version": "1.0.0",
-  "description": "creating a typescript environment for God application.",
+  "description": "creating a testing typescript environment for Maganime Application.",
   "main": "main.ts",
   "scripts": {
     "prepublish": "typings install",
@@ -41,6 +41,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "animejs": "^3.0.1",
     "svg.js": "^2.6.6"
   }
 }
