@@ -5,7 +5,7 @@
   "main": "main.ts",
   "scripts": {
     "prepublish": "typings install",
-    "wave": "node_modules/.bin/webpack-dev-server",
+    "god": "node_modules/.bin/webpack-dev-server",
     "watch": "webpack --watch",
     "test": "karma start"
   },
