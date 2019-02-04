@@ -1,0 +1,46 @@
+{
+  "name": "trigo-typescript-project",
+  "version": "1.0.0",
+  "description": "creating a typescript environment for God application.",
+  "main": "main.ts",
+  "scripts": {
+    "prepublish": "typings install",
+    "wave": "node_modules/.bin/webpack-dev-server",
+    "watch": "webpack --watch",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonymedrano/typescript-sass.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "es2015",
+    "node"
+  ],
+  "author": "Tony Medrano <info@tonymedrano.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonymedrano/typescript-sass.git/issues"
+  },
+  "homepage": "https://github.com/tonymedrano/typescript-sass.git#readme",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.6",
+    "jasmine-core": "^2.99.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-typescript": "^3.0.12",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.6.0-dev.20170912",
+    "typings": "^2.1.1",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "svg.js": "^2.6.6"
+  }
+}
