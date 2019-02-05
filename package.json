@@ -27,6 +27,8 @@
   "homepage": "https://github.com/tonymedrano/typescript-sass.git#readme",
   "devDependencies": {
     "@types/jasmine": "^2.8.6",
+    "@types/node": "^10.12.18",
+    "@types/animejs": "^2.0.1",
     "jasmine-core": "^2.99.1",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",

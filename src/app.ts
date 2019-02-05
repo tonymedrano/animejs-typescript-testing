@@ -7,5 +7,5 @@
  * Copyright (c) 2019 Tony Medrano
  */
 
-import { run } from "./components"
+import { run, fitElementToParent } from "./components"
 run()

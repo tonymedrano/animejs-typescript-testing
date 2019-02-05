@@ -1,8 +1,5 @@
 import * as SVG from "svg.js"
 
-const width = window.innerWidth * .5
-const height = window.innerHeight * .5
-
 const svg = document.createElement('SVG');
 svg.id = 'drawing'
 document.body.appendChild(svg)

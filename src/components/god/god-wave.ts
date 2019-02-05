@@ -1,11 +1,12 @@
 /*
- * Filename: /Users/tonymedrano/Desktop/DEVELOPMENT/waves-typescript/src/god/god-wave.ts
- * Path: /Users/tonymedrano/Desktop/DEVELOPMENT/waves-typescript
+ * Filename: /Users/tonymedrano/Desktop/DEVELOPMENT/animejs-typescript-testing/src/components/god/god-wave.ts
+ * Path: /Users/tonymedrano/Desktop/DEVELOPMENT/animejs-typescript-testing
  * Created Date: Tuesday, October 30th 2018, 1:42:40 pm
  * Author: tonymedrano
  * 
- * Copyright (c) 2018 Tony Medrano
+ * Copyright (c) 2019 Tony Medrano
  */
+
 
 
 export class Wave {
@@ -13,7 +14,7 @@ export class Wave {
     private svg: Element
     public width: any
     public height: any
-    private shapes: Array<any>
+    public shapes: Array<any>
 
     constructor() {
         this.svgns = 'http://www.w3.org/2000/svg'
