@@ -50,8 +50,7 @@ const run = () => {
         r: 5
     })
 
-    let length = line4.length()
-
+    const length = line4.length()
     const point = draw.circle().attr({
         cx: 100,
         cy: 350,
@@ -63,8 +62,6 @@ const run = () => {
             cx:  p.x,
             cy:  p.y
         })
-        console.log(p);
-       // this.center(p.x, p.y)
     })
 }
 
