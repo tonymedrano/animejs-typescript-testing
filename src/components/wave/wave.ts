@@ -1,19 +1,18 @@
-import * as SVG from "svg.js"
+import * as SVG from 'svg.js'
 
-const svg = document.createElement('SVG');
+const svg = document.createElement('SVG')
 svg.id = 'drawing'
 document.body.appendChild(svg)
-const draw = SVG('drawing').size('100%', '100%').viewbox(0, 0, 800, 1000)
 
-export const run = () => {
-    /** circles */
-    const circle1 = draw.circle(100)
-    const circle2 = draw.circle(100)
-    const circle3 = draw.circle(100)
-    const circle4 = draw.circle(100)
-    const circle5 = draw.circle(100)
+const width = window.innerWidth
+const height = window.innerHeight
+const draw = SVG('drawing').size(width, height).viewbox(0, 0, width, height)
 
-    circle1.attr({
+const run = () => {
+    //. circles
+    const circle = draw.circle(100)
+
+    circle.attr({
         cx: '50%',
         cy: '50%',
         r: 0,
@@ -24,48 +23,51 @@ export const run = () => {
     }).animate({ ease: '<', delay: 250, duration: 6000 })
         .attr({ r: 1220 })
 
+        const paths = {
+            blue: 'M 100 350 q 150 -300 300 0'
+        }
 
-    circle2.attr({
-        cx: '50%',
-        cy: '50%',
-        r: 0,
-        stroke: 'white',
-        'stroke-opacity': 0.4,
-        'fill-opacity': 0,
-        'stroke-width': 12
-    }).animate({ ease: '<', delay: 1250, duration: 6000 })
-        .attr({ r: 1220 })
+    const line1 = draw.path('M 100 350 l 150 -300').stroke({ width: 3, color: 'red' }).fill('none')
+    const line2 = draw.path('M 250 50 l 150 300').stroke({ width: 3, color: 'red' }).fill('none')
+    const line3 = draw.path('M 175 200 l 150 0').stroke({ width: 3, color: 'green' }).fill('none')
+    const line4 = draw.path(paths.blue).stroke({ width: 5, color: 'blue' }).fill('none')
 
-    circle3.attr({
-        cx: '50%',
-        cy: '50%',
-        r: 0,
-        stroke: 'white',
-        'stroke-opacity': 0.4,
-        'fill-opacity': 0,
-        'stroke-width': 8
-    }).animate({ ease: '<', delay: 2250, duration: 6000 })
-        .attr({ r: 1220 })
+    draw.circle(100).attr({
+        cx: 100,
+        cy: 350,
+        r: 5
+    })
 
-    circle4.attr({
-        cx: '50%',
-        cy: '50%',
-        r: 0,
-        stroke: 'white',
-        'stroke-opacity': 0.4,
-        'fill-opacity': 0,
-        'stroke-width': 4
-    }).animate({ ease: '<', delay: 3250, duration: 6000 })
-        .attr({ r: 1220 })
+    draw.circle(100).attr({
+        cx: 250,
+        cy: 50,
+        r: 5
+    })
 
-    circle5.attr({
-        cx: '50%',
-        cy: '50%',
-        r: 0,
-        stroke: 'white',
-        'stroke-opacity': 0.4,
-        'fill-opacity': 0,
-        'stroke-width': 2
-    }).animate({ ease: '<', delay: 4250, duration: 6000 })
-        .attr({ r: 1220 })
+    draw.circle(100).attr({
+        cx: 400,
+        cy: 350,
+        r: 5
+    })
+
+    let length = line4.length()
+
+    const point = draw.circle().attr({
+        cx: 100,
+        cy: 350,
+        r: 10,
+        stroke: 'red'
+    }).animate(8000, '<>').during((pos: number) => {
+        const p = line4.pointAt(pos * length)
+        point.attr({
+            cx:  p.x,
+            cy:  p.y
+        })
+        console.log(p);
+       // this.center(p.x, p.y)
+    })
+}
+
+export const wave = {
+    run
 }

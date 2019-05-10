@@ -7,5 +7,5 @@
  * Copyright (c) 2019 Tony Medrano
  */
 
-import { run, fitElementToParent } from "./components"
-run()
+import { wave } from "./components"
+wave.run()

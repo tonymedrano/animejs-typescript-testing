@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/tonymedrano/typescript-sass.git#readme",
   "devDependencies": {
+    "@types/animejs": "^2.0.1",
     "@types/jasmine": "^2.8.6",
     "@types/node": "^10.12.18",
-    "@types/animejs": "^2.0.1",
     "jasmine-core": "^2.99.1",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
@@ -44,6 +44,6 @@
   },
   "dependencies": {
     "animejs": "^3.0.1",
-    "svg.js": "^2.6.6"
+    "svg.js": "^2.7.1"
   }
 }
